@@ -76,3 +76,13 @@ stages:
               runtimeStack: 'NODE|10.1'
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
               startUpCommand: 'npm run start'
+
+          - task: SqlAzureDacpacDeployment@1
+            displayName: DacPac
+            inputs:
+              azureSubscription: 'database-connection'
+              ServerName: 'theblacklistserver.database.windows.net'
+              DatabaseName: 'theblacklistdb'
+              SqlUsername: 'ordonezkri'
+              SqlPassword: 'Lacmitmolfm26'
+              DacpacFile: 'C:\Users\krizia.anne.ordonez\serverless-full-stack-apps-azure-sql\Database1\bin\Debug'    
