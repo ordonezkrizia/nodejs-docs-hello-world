@@ -80,9 +80,9 @@ stages:
           - task: SqlAzureDacpacDeployment@1
             displayName: DacPac
             inputs:
-              azureSubscription: 'database-connection'
+              azureSubscription: 'database-connection2'
               ServerName: 'theblacklistserver.database.windows.net'
               DatabaseName: 'theblacklistdb'
               SqlUsername: 'ordonezkri'
               SqlPassword: 'Lacmitmolfm26'
-              DacpacFile: 'C:\Users\krizia.anne.ordonez\serverless-full-stack-apps-azure-sql\Database1\bin\Debug'    
+              DacpacFile: 'C:\Users\krizia.anne.ordonez\serverless-full-stack-apps-azure-sql\Database1\bin\Debug'
